@@ -4,7 +4,7 @@ import NavbarComponent from "@/components/customer/navbar/NavbarComponent";
 import { ThemeProvider } from "next-themes";
 import { FooterComponent } from "@/components/customer/footer/FooterComponent";
 import { Toaster } from "@/components/ui/toaster"
-import StoreProvider from "../StoreProvider";
+import ScrollToTopButton from "@/components/customer/home/ScrollToTopButton";
 
 export const metadata: Metadata = {
     title: {
@@ -16,28 +16,26 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-    children,
-}: Readonly<{
+                                       children,
+                                   }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className=" bg-khotixs-background-white dark:bg-khotixs-background-dark ">
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="light"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    <NavbarComponent />
-                    {/*<NavbarUserProfile/>*/}
-                    <StoreProvider>
-                        {children}
-                    </StoreProvider>
-                    <FooterComponent />
-                    <Toaster />
-                </ThemeProvider>
-            </body>
+        <body className=" bg-khotixs-background-white dark:bg-khotixs-background-dark ">
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+        >
+            <NavbarComponent />
+            {children}
+            <FooterComponent />
+            <Toaster />
+            <ScrollToTopButton/>
+        </ThemeProvider>
+        </body>
         </html>
     );
 }

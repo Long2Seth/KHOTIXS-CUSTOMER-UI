@@ -1,16 +1,30 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "standalone",
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "i.ibb.co",
+      },
+      {
+        protocol: "http",
+        hostname: "khotixs-assets.devkh.asia",
+      },
+      {
+        protocol: "http",
+        hostname: "khotixs.devkh.asia",
       }
-    ]
+    ],
+    domains: [
+      'gratisography.com',
+      'th.bing.com',
+      'www.piclumen.com',
+      'hebbkx1anhila5yf.public.blob.vercel-storage.com'
+    ],
+
   },
-  
 };
 
 export default nextConfig;

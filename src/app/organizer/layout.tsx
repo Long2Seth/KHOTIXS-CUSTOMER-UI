@@ -1,11 +1,10 @@
 import type {Metadata} from "next";
 import "../globals.css";
 import {ThemeProvider} from "next-themes";
-import StoreProvider from "@/app/StoreProvider";
 import {Toaster} from "@/components/ui/toaster";
-import FooterOrganizer from "@/components/organizer/FooterOrganizer";
-import NavbarOrganizerComponent from "@/components/organizer/NavbarOrganizerComponent";
-import CategoriesOrganizerComponent from "@/components/organizer/categoriesOrganizerComponent";
+import FooterOrganizer from "@/components/organizer/navbar/FooterOrganizer";
+import NavbarOrganizerComponent from "@/components/organizer/navbar/NavbarOrganizerComponent";
+import CategoriesOrganizerComponent from "@/components/organizer/navbar/categoriesOrganizerComponent";
 import React from "react";
 
 
@@ -30,9 +29,7 @@ export default function RootLayout({
         >
             <NavbarOrganizerComponent/>
             <CategoriesOrganizerComponent/>
-            <StoreProvider>
                 {children}
-            </StoreProvider>
             <FooterOrganizer/>
             <Toaster/>
         </ThemeProvider>

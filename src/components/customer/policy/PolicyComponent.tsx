@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import React from "react";
 import {useEffect , useState} from "react";
@@ -13,15 +14,14 @@ export default function PolicyComponent (){
         return () => clearTimeout(timer);
     }, []);
 
-
     return(
         <>
             {
                 isLoading ? <PolicySkeletonComponent/> :
-                    <section className="w-full space-y-[50px] md:space-y-[80px] xl:space-y-[100px] my-[50px] my:mb-[80px] xl:my-[100px] bg-khotixs-background-white dark:bg-khotixs-background-dark">
+                    <section className="w-full space-y-[50px] md:space-y-[80px] xl:space-y-[100px] my-10 my:mb-[80px] bg-khotixs-background-white dark:bg-khotixs-background-dark">
                         <section className=" flex flex-col gap-5 ">
                             <div className="w-full ">
-                                <h1 className="w-full text-center text-title-color text-lg md:text-2xl xl:text-4xl font-bold uppercase p-5 dark:text-secondary-color-text ">
+                                <h1 className="w-full text-center text-title-color text-lg md:text-2xl xl:text-4xl font-bold uppercase dark:text-secondary-color-text ">
                                     How Can We Assist You With Khotixs?
                                 </h1>
                                 <p className="text-center text-description-color text-base md:text-lg xl:text-xl dark:text-gray-200  px-[25px]  ">
@@ -35,7 +35,7 @@ export default function PolicyComponent (){
                                     {/* Privacy Policy */}
                                     <div className=" bg-white dark:bg-secondary-color p-4 rounded-[6px] ">
                                         <div className="relative flex items-center gap-3 my-2 ">
-                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2">
+                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2 dark:text-white">
                                                 Privacy Policy
                                             </h2>
                                         </div>
@@ -50,7 +50,7 @@ export default function PolicyComponent (){
                                     {/* Responsibilities */}
                                     <div className="bg-white dark:bg-secondary-color p-4 rounded-[6px] ">
                                         <div className=" relative flex items-center gap-3 my-2 ">
-                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2">
+                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2 dark:text-white">
                                                 Responsibilities
                                             </h2>
                                         </div>
@@ -63,7 +63,7 @@ export default function PolicyComponent (){
                                     {/* Security Policy */}
                                     <div className="bg-white dark:bg-secondary-color p-4 rounded-[6px] ">
                                         <div className=" flex items-center gap-3 my-2 ">
-                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2">
+                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2 dark:text-white">
                                                 Security Policy
                                             </h2>
                                         </div>
@@ -78,7 +78,7 @@ export default function PolicyComponent (){
                                     {/* Terms of Use */}
                                     <div className="bg-white dark:bg-secondary-color p-4 rounded-[6px] ">
                                         <div className=" flex items-center gap-3 my-2 ">
-                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2">
+                                            <h2 className="text-title-color text-base md:text-lg xl:text-xl font-bold mb-2 dark:text-white">
                                                 Terms of Use
                                             </h2>
                                         </div>
@@ -98,16 +98,12 @@ export default function PolicyComponent (){
                                         </ul>
                                     </div>
                                 </div>
-
                                 <img
                                     className=" rounded-[6px] hidden lg:block "
-                                    src="https://s3-alpha-sig.figma.com/img/d5c1/c166/e294dbfeaf7f92085a49583039cbc1dc?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lFZqy7CkHU5TjyvsXjbAp~BfEqWhuhIe2LJpTgAapnCP9Fp3928lMXvE3XoRgkURWhFBiYCpaDnAATWbc3PTMPDRreMRoZH8Sr8Ev0vCwpAIWxYwFMXrzWaUJopDpac4mabqu9uuu0Pn7B6QdU9ydhYZuQCMaxH942r~KigHbz6uSH07mLH3-HKvvt88galzOBXAP30O6va7V9lamx4AGirsjertnmxehmfnx~tib-rJsi3vvXNdYqsVeDgouhX8DsfNoimA3~XeZu0OizsNuUwz8rOvdkFtx7u03l3XbI2rHkQbrUw9JuJUNpkJ3ttMUlEn22FDENTjVlStCLt1Kw__"
+                                    src="Privacy-policy.png"
                                     alt="Khotixs"/>
                             </div>
-
                         </section>
-
-
                     </section>
             }
         </>
